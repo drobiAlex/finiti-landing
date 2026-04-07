@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Finiti - Privacy</title>
+    <style>
+      :root {
+        --bg: #f6f4f0;
+        --ink: #1b1a17;
+        --muted: #5f5b55;
+        --accent: #1f6feb;
+        --card: #ffffff;
+        --border: rgba(27, 26, 23, 0.14);
+        --shadow: 0 18px 40px rgba(27, 26, 23, 0.12);
+        --radius: 18px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Garamond", "Georgia", serif;
+        color: var(--ink);
+        background: radial-gradient(circle at top left, #ffffff 0%, #f6f4f0 45%, #efe9e2 100%);
+        min-height: 100vh;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 36px 24px 48px;
+      }
+      header {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 12px;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 18px 22px;
+        box-shadow: var(--shadow);
+      }
+      .header-section {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .brand {
+        font-weight: 700;
+        letter-spacing: 0.6px;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        font-size: 0.95rem;
+      }
+      nav a {
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        color: var(--muted);
+        transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+      }
+      nav a:hover {
+        border-color: rgba(27, 26, 23, 0.2);
+        color: var(--ink);
+        background: rgba(255, 255, 255, 0.6);
+      }
+      nav a.active {
+        border-color: rgba(31, 111, 235, 0.35);
+        color: var(--ink);
+        background: rgba(31, 111, 235, 0.08);
+      }
+      .cta {
+        justify-content: flex-end;
+        font-size: 0.9rem;
+      }
+      .cta span {
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(31, 111, 235, 0.12);
+        color: var(--ink);
+        border: 1px solid rgba(31, 111, 235, 0.2);
+      }
+      main {
+        margin-top: 28px;
+        display: grid;
+        gap: 20px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 24px;
+        box-shadow: 0 12px 24px rgba(27, 26, 23, 0.08);
+      }
+      h1 {
+        font-size: 2.2rem;
+        margin: 0 0 8px 0;
+        letter-spacing: 0.3px;
+      }
+      h2 {
+        margin: 0 0 10px 0;
+        font-size: 1.3rem;
+      }
+      p {
+        margin: 0 0 12px 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      ul {
+        margin: 0 0 12px 0;
+        padding-left: 18px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      @media (max-width: 720px) {
+        header {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .header-section,
+        nav,
+        .cta {
+          justify-content: center;
+        }
+        .cta span {
+          width: fit-content;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="header-section">
+          <span class="brand">Finiti</span>
+        </div>
+        <nav class="header-section">
+          <a class="active" href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+        <div class="header-section cta">
+          <span>Countdown wallpaper for iOS</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="card">
+          <h1>Privacy Policy</h1>
+          <p><strong>Last revised:</strong> April 7, 2026</p>
+          <p>
+            This Privacy Policy explains how Finiti ("Finiti", "we", "us", or "our") handles information when you use the Finiti mobile application for iOS ("App").
+          </p>
+          <p>
+            This Policy applies to all users of the App and is designed to comply with applicable data protection laws, including:
+          </p>
+          <ul>
+            <li>Regulation (EU) 2016/679 (General Data Protection Regulation - GDPR).</li>
+            <li>Apple App Store privacy requirements.</li>
+            <li>Other applicable privacy and consumer protection laws.</li>
+          </ul>
+          <p>
+            By downloading or using the App, you agree to this Privacy Policy. If you do not agree, please do not use the App.
+          </p>
+        </section>
+        <section class="card">
+          <h2>1. Data Controller</h2>
+          <p>Finiti is operated by:</p>
+          <p>
+            Oleksandr Drobinin 25.36<br />
+            Poland<br />
+            Support email: support-finiti@drobinin.space
+          </p>
+          <h2>2. Summary (Privacy by Design)</h2>
+          <ul>
+            <li>No user accounts or registration.</li>
+            <li>No advertising or advertising SDKs.</li>
+            <li>No analytics or tracking SDKs.</li>
+            <li>No sale or sharing of personal data.</li>
+            <li>No data collected, transmitted, or stored on external servers.</li>
+            <li>All data is stored locally on your device.</li>
+          </ul>
+          <h2>3. Information We Collect</h2>
+          <p><strong>We do not collect any personal information.</strong></p>
+          <p>The App stores the following data locally on your device only:</p>
+          <ul>
+            <li>Goal data (title, start date, deadline).</li>
+            <li>Wallpaper style preferences (colors, position, shape, font sizes).</li>
+            <li>Automation status (whether the shortcut has been configured).</li>
+          </ul>
+          <p>This data never leaves your device. We have no access to it.</p>
+          <p><strong>We Do NOT Collect</strong></p>
+          <ul>
+            <li>Names, usernames, or account credentials.</li>
+            <li>Email addresses (unless you contact support).</li>
+            <li>Location data.</li>
+            <li>Contacts.</li>
+            <li>Usage analytics or telemetry.</li>
+            <li>Identifiers for advertising purposes (e.g., IDFA).</li>
+            <li>Payment or billing information (payments are handled by Apple).</li>
+          </ul>
+          <p><strong>Customer Support (Only If You Contact Us)</strong></p>
+          <p>If you email support, we may receive:</p>
+          <ul>
+            <li>Your email address.</li>
+            <li>The content of your message.</li>
+          </ul>
+          <p>This information is used solely to respond to your request.</p>
+          <h2>4. How We Use Information</h2>
+          <p>All processing happens locally on your device:</p>
+          <ul>
+            <li>Generate countdown wallpaper images based on your goal.</li>
+            <li>Store your wallpaper style preferences.</li>
+            <li>Set wallpaper via iOS Shortcuts integration.</li>
+          </ul>
+          <p>We do not use your data for advertising, marketing, profiling, or any purpose beyond providing App functionality.</p>
+          <h2>5. Third-Party Services</h2>
+          <p><strong>a) Apple Services</strong></p>
+          <p>Apple may collect data according to its own privacy policies when you:</p>
+          <ul>
+            <li>Download the App from the App Store.</li>
+            <li>Make in-app purchases (handled entirely by Apple).</li>
+            <li>Use iOS Shortcuts to set wallpapers.</li>
+          </ul>
+          <p>Please review Apple's Privacy Policy for details.</p>
+          <p><strong>b) No Other Third Parties</strong></p>
+          <p>We do not use any third-party analytics, advertising, crash reporting, or data processing services.</p>
+          <h2>6. Data Storage and Security</h2>
+          <ul>
+            <li>All data is stored locally on your device using iOS sandboxing and system-level encryption.</li>
+            <li>No external databases or servers are used.</li>
+            <li>You can delete all App data by deleting the App from your device.</li>
+          </ul>
+          <h2>7. Data Retention</h2>
+          <ul>
+            <li>App data remains on your device until you delete it or uninstall the App.</li>
+            <li>Support emails are retained only as long as necessary to resolve your request.</li>
+          </ul>
+          <h2>8. Legal Basis for Processing (GDPR)</h2>
+          <p>Where applicable, data processing is based on:</p>
+          <ul>
+            <li>Performance of a contract — providing App functionality.</li>
+            <li>Consent — when you voluntarily contact support.</li>
+          </ul>
+          <h2>9. Your Rights</h2>
+          <p>Depending on your jurisdiction, you may have the right to:</p>
+          <ul>
+            <li>Access information we hold about you (if any).</li>
+            <li>Request deletion of support correspondence.</li>
+            <li>Object to certain processing or withdraw consent where applicable.</li>
+            <li>Complain to a data protection authority.</li>
+          </ul>
+          <p>To exercise your rights, contact: support-finiti@drobinin.space</p>
+          <p>We typically respond within 30 days.</p>
+          <h2>10. Children's Privacy</h2>
+          <p>Finiti is not intended for children under 13 (or the minimum age required by local law). We do not knowingly collect personal data from children.</p>
+          <h2>11. Changes to This Policy</h2>
+          <p>We may update this Privacy Policy to reflect changes in the App or legal requirements. The "Last revised" date will be updated accordingly.</p>
+          <p>Continued use of the App after changes constitutes acceptance of the updated Policy.</p>
+          <h2>12. Contact</h2>
+          <p>If you have questions about this Privacy Policy, contact:</p>
+          <p>
+            Oleksandr Drobinin 25.36<br />
+            Poland<br />
+            Email: support-finiti@drobinin.space
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

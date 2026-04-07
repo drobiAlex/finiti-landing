@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Finiti - Home</title>
+    <style>
+      :root {
+        --bg: #f6f4f0;
+        --ink: #1b1a17;
+        --muted: #5f5b55;
+        --accent: #1f6feb;
+        --card: #ffffff;
+        --border: rgba(27, 26, 23, 0.14);
+        --shadow: 0 18px 40px rgba(27, 26, 23, 0.12);
+        --radius: 18px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Garamond", "Georgia", serif;
+        color: var(--ink);
+        background: radial-gradient(circle at top left, #ffffff 0%, #f6f4f0 45%, #efe9e2 100%);
+        min-height: 100vh;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 36px 24px 48px;
+      }
+      header {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 12px;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 18px 22px;
+        box-shadow: var(--shadow);
+      }
+      .header-section {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .brand {
+        font-weight: 700;
+        letter-spacing: 0.6px;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        font-size: 0.95rem;
+      }
+      nav a {
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        color: var(--muted);
+        transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+      }
+      nav a:hover {
+        border-color: rgba(27, 26, 23, 0.2);
+        color: var(--ink);
+        background: rgba(255, 255, 255, 0.6);
+      }
+      nav a.active {
+        border-color: rgba(31, 111, 235, 0.35);
+        color: var(--ink);
+        background: rgba(31, 111, 235, 0.08);
+      }
+      .cta {
+        justify-content: flex-end;
+        font-size: 0.9rem;
+      }
+      .cta span {
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(31, 111, 235, 0.12);
+        color: var(--ink);
+        border: 1px solid rgba(31, 111, 235, 0.2);
+      }
+      main {
+        margin-top: 28px;
+        display: grid;
+        gap: 20px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 24px;
+        box-shadow: 0 12px 24px rgba(27, 26, 23, 0.08);
+      }
+      h1 {
+        font-size: 2.2rem;
+        margin: 0 0 8px 0;
+        letter-spacing: 0.3px;
+      }
+      p {
+        margin: 0 0 12px 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      @media (max-width: 720px) {
+        header {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .header-section,
+        nav,
+        .cta {
+          justify-content: center;
+        }
+        .cta span {
+          width: fit-content;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="header-section">
+          <span class="brand">Finiti</span>
+        </div>
+        <nav class="header-section">
+          <a class="active" href="index.html">Home</a>
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+        <div class="header-section cta">
+          <span>Countdown wallpaper for iOS</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="card">
+          <h1>Finiti - Countdown Wallpaper for iOS</h1>
+          <p>
+            Finiti turns your goals into a visual countdown on your lock screen. Set a goal or track the year, and Finiti generates a dot grid wallpaper that updates automatically every day. Watch your progress fill in, one dot at a time.
+          </p>
+          <p class="meta">
+            <strong>Last Updated:</strong> April 7, 2026
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
