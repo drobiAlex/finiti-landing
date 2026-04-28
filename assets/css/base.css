@@ -58,17 +58,22 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  /* Paint the brand color on the root so iOS Safari's overscroll, status-bar
+     zone and URL-bar overlap zone all stay indigo instead of leaking white. */
+  background:
+    radial-gradient(1200px 800px at 100% -10%, rgba(255, 138, 61, 0.18), transparent 60%),
+    radial-gradient(circle at top left, #4D47E8 0%, #3D3CDB 50%, #2C2999 100%);
+  background-color: var(--bg-deep);
+  min-height: 100%;
 }
 
 body {
   margin: 0;
   font-family: var(--serif);
   color: var(--ink);
-  background:
-    radial-gradient(1200px 800px at 100% -10%, rgba(255, 138, 61, 0.18), transparent 60%),
-    radial-gradient(circle at top left, #4D47E8 0%, #3D3CDB 50%, #2C2999 100%);
-  background-attachment: fixed;
+  background: transparent;
   min-height: 100vh;
+  min-height: 100dvh;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
