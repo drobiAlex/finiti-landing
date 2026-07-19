@@ -336,6 +336,10 @@
   max-width: 40ch;
   line-height: 1.55;
 }
+.closer .hero__trust {
+  max-width: none;
+  justify-content: center;
+}
 
 /* ---------- Sticky CTA — mobile only ---------- */
 
