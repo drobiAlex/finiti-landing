@@ -3,18 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#3D3CDB" />
-    <meta name="description" content="Finiti turns your goals into a daily countdown wallpaper. Every dot is a day. iOS." />
+    <meta name="theme-color" content="#0A0A0E" />
+    <meta name="description" content="Deadline app blocker for iPhone. Finiti locks the apps that steal your focus and puts the countdown on your lock screen — until you ship." />
     <meta name="apple-itunes-app" content="app-id=6761764736" />
-    <meta property="og:title" content="Finiti — Your lock screen, counting down." />
-    <meta property="og:description" content="Every dot is a day. Track anything with an end. iOS." />
+    <meta property="og:title" content="Finiti — The feed is infinite. You aren't." />
+    <meta property="og:description" content="Lock the apps that steal your hours. Put the countdown on your lock screen. Every dot is a day you don't get back." />
     <meta property="og:type" content="website" />
-    <title>Finiti — Your lock screen, counting down.</title>
+    <title>Finiti — The feed is infinite. You aren't.</title>
 
     <link rel="preconnect" href="https://tools.applemediaservices.com" crossorigin />
     <link rel="preconnect" href="https://eu.i.posthog.com" crossorigin />
     <link rel="dns-prefetch" href="https://eu.i.posthog.com" />
-    <link rel="preload" as="image" href="assets/screenshots/01-lock-screen.png" />
 
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/landing.css" />
@@ -49,114 +48,156 @@
           </svg>
           Finiti
         </a>
-        <nav class="site-nav" aria-label="Primary">
-          <a href="index.html" aria-current="page">Home</a>
-          <a href="terms.html">Terms</a>
-          <a href="privacy.html">Privacy</a>
-        </nav>
-        <span class="header-cta">Countdown wallpaper for iOS</span>
+        <a
+          class="header-cta app-store-badge"
+          data-source="header"
+          href="https://apps.apple.com/us/app/finiti-days-left/id6761764736"
+        >Get the app</a>
       </header>
 
       <main id="main" class="sections">
         <!-- Hero -->
-        <section class="card hero reveal" aria-labelledby="hero-title">
+        <section class="hero reveal" aria-labelledby="hero-title">
           <div class="hero__copy">
-            <span class="hero__eyebrow">For iPhone · iOS 26+</span>
-            <h1 id="hero-title" class="hero__title">Your lock screen,<br />counting down.</h1>
-            <p class="hero__sub">Every dot is a day. Track anything with an end.</p>
+            <span class="hero__eyebrow">Deadline app blocker · iPhone</span>
+            <h1 id="hero-title" class="hero__title">
+              The feed is infinite.<br />You aren&rsquo;t<span class="accent">.</span>
+            </h1>
+            <p class="hero__sub">
+              You have a deadline. Your phone doesn&rsquo;t care. Finiti locks the
+              apps that steal your hours and puts the countdown on your lock
+              screen — until you ship.
+            </p>
             <a
               class="badge-link app-store-badge"
               data-source="hero"
               aria-label="Download Finiti on the App Store"
-              href="https://apps.apple.com/us/app/finiti-days-left/id6761764736?utm_source=tiktok&utm_medium=organic&utm_campaign=studytok"
+              href="https://apps.apple.com/us/app/finiti-days-left/id6761764736"
             >
               <img
                 src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us"
                 alt="Download on the App Store"
-                width="220"
-                height="74"
+                width="200"
+                height="67"
               />
             </a>
             <p class="hero__trust">
-              <span>Free</span><span>No accounts</span><span>On-device</span>
+              <span>7-day free trial</span><span>No accounts</span><span>On-device</span>
             </p>
           </div>
-          <div class="hero__mockup">
-            <img
-              src="assets/screenshots/01-lock-screen.png"
-              alt="Finiti lock screen wallpaper showing a dot grid countdown"
-              loading="eager"
-              decoding="async"
-              fetchpriority="high"
-            />
+          <div class="year-panel" aria-hidden="false">
+            <div class="year-panel__head">
+              <strong>This year</strong>
+              <span class="year-panel__label" id="year-grid-label"></span>
+            </div>
+            <div class="year-grid" id="year-grid" role="img" aria-label="Dot grid of the current year"></div>
+            <p class="year-panel__foot">
+              This is your year, right now. <strong>Every dot is a day you
+              don&rsquo;t get back.</strong> Finiti puts a grid like this on your
+              lock screen — for the goal you keep putting off.
+            </p>
           </div>
         </section>
 
-        <!-- Gallery -->
-        <section class="reveal" aria-labelledby="gallery-title">
+        <!-- Steps -->
+        <section class="reveal" aria-labelledby="steps-title">
           <div class="section-head">
-            <h2 id="gallery-title">See it in action</h2>
+            <h2 id="steps-title">The deal is simple.</h2>
+          </div>
+          <div class="steps">
+            <article class="step">
+              <span class="step__num">01</span>
+              <h3>Pick the goal.</h3>
+              <p>Launch day, exam, marathon. One date. Now it&rsquo;s real.</p>
+            </article>
+            <article class="step">
+              <span class="step__num">02</span>
+              <h3>Lock the leaks.</h3>
+              <p>Instagram, TikTok, Reels — blocked during your daily focus window. Three taps, locked in.</p>
+            </article>
+            <article class="step">
+              <span class="step__num">03</span>
+              <h3>Face the countdown.</h3>
+              <p>It lives on your lock screen, so you see it every time you pick up the phone.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- The trade -->
+        <section class="reveal" aria-labelledby="trade-title">
+          <div class="section-head">
+            <h2 id="trade-title">47 days. Zero Reels. <span class="muted">Pick the trade.</span></h2>
             <span class="hint">Swipe →</span>
           </div>
           <div class="gallery" role="list">
             <figure role="listitem">
               <img src="assets/screenshots/01-lock-screen.png" alt="Lock screen with Finiti countdown wallpaper" loading="lazy" decoding="async" />
-              <figcaption>Your lock screen, counting down.</figcaption>
+              <figcaption>The countdown lives where you can&rsquo;t ignore it.</figcaption>
             </figure>
             <figure role="listitem">
               <img src="assets/screenshots/02-every-dot.png" alt="Dot grid representing days" loading="lazy" decoding="async" />
-              <figcaption>Every dot is a day of your life.</figcaption>
+              <figcaption>Every dot is a day you don&rsquo;t get back.</figcaption>
             </figure>
             <figure role="listitem">
               <img src="assets/screenshots/03-track-anything.png" alt="Goal examples in Finiti" loading="lazy" decoding="async" />
-              <figcaption>Track a launch, a trip, a year — anything with an end.</figcaption>
+              <figcaption>A launch. An exam. A marathon. Anything with an end.</figcaption>
             </figure>
             <figure role="listitem">
               <img src="assets/screenshots/04-themes.png" alt="Theme picker with 12 themes" loading="lazy" decoding="async" />
-              <figcaption>12 themes. Pick your mood.</figcaption>
+              <figcaption>12 themes. Zero excuses.</figcaption>
             </figure>
             <figure role="listitem">
               <img src="assets/screenshots/05-mockup.png" alt="iPhone mockup with Finiti wallpaper" loading="lazy" decoding="async" />
-              <figcaption>Refreshes every morning, automatically.</figcaption>
+              <figcaption>Refreshes every morning. Automatically.</figcaption>
             </figure>
           </div>
         </section>
 
-        <!-- Features -->
-        <section class="reveal" aria-labelledby="features-title">
+        <!-- Receipts -->
+        <section class="reveal" aria-labelledby="receipts-title">
           <div class="section-head">
-            <h2 id="features-title">Built around one idea.</h2>
+            <h2 id="receipts-title">The streak knows.</h2>
           </div>
-          <div class="features">
-            <article class="feature">
-              <svg class="feature__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-                <circle cx="5" cy="5" r="1.5" /><circle cx="12" cy="5" r="1.5" /><circle cx="19" cy="5" r="1.5" />
-                <circle cx="5" cy="12" r="1.5" /><circle cx="12" cy="12" r="1.5" /><circle cx="19" cy="12" r="1.5" />
-                <circle cx="5" cy="19" r="1.5" /><circle cx="12" cy="19" r="1.5" /><circle cx="19" cy="19" r="1.5" />
-              </svg>
-              <h3>Visualize any goal.</h3>
-              <p>A daily dot grid for graduation, exams, summer, anything.</p>
+          <div class="receipts">
+            <article class="receipt">
+              <span class="receipt__value">Day 14</span>
+              <h3>Streak</h3>
+              <p>Show up daily. The streak knows when you don&rsquo;t.</p>
             </article>
-            <article class="feature">
-              <svg class="feature__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 12a9 9 0 1 1-3-6.7" />
-                <polyline points="21 4 21 10 15 10" />
-              </svg>
-              <h3>Updates daily.</h3>
-              <p>Shortcuts automation refreshes the wallpaper every morning.</p>
+            <article class="receipt">
+              <span class="receipt__value">235h</span>
+              <h3>Focus logged</h3>
+              <p>Blocked hours are counted. The number only moves when you do.</p>
             </article>
-            <article class="feature">
-              <svg class="feature__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="9" />
-                <circle cx="8.5" cy="9.5" r="1.2" fill="currentColor" stroke="none" />
-                <circle cx="15.5" cy="9.5" r="1.2" fill="currentColor" stroke="none" />
-                <circle cx="8.5" cy="15" r="1.2" fill="currentColor" stroke="none" />
-                <circle cx="15.5" cy="15" r="1.2" fill="currentColor" stroke="none" />
-              </svg>
-              <h3>12 themes.</h3>
-              <p>Pick the look that matches your mood.</p>
+            <article class="receipt">
+              <span class="receipt__value">All-in</span>
+              <h3>Modes</h3>
+              <p>Casual, Focused, All-in. Pick how serious you are.</p>
             </article>
           </div>
+        </section>
+
+        <!-- Closer -->
+        <section class="closer reveal" aria-labelledby="closer-title">
+          <h2 id="closer-title">Your deadline doesn&rsquo;t move.</h2>
+          <p>The feed can wait. Put the countdown where you&rsquo;ll see it — and lock everything that gets in the way.</p>
+          <a
+            class="badge-link app-store-badge"
+            data-source="closer"
+            aria-label="Download Finiti on the App Store"
+            href="https://apps.apple.com/us/app/finiti-days-left/id6761764736"
+          >
+            <img
+              src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us"
+              alt="Download on the App Store"
+              width="200"
+              height="67"
+              loading="lazy"
+            />
+          </a>
+          <p class="hero__trust">
+            <span>7-day free trial</span><span>No accounts</span><span>On-device</span>
+          </p>
         </section>
       </main>
 
@@ -176,14 +217,14 @@
     <a
       class="sticky-cta app-store-badge"
       data-source="sticky"
-      href="https://apps.apple.com/us/app/finiti-days-left/id6761764736?utm_source=tiktok&utm_medium=organic&utm_campaign=studytok"
+      href="https://apps.apple.com/us/app/finiti-days-left/id6761764736"
       aria-label="Download Finiti on the App Store"
     >
       <img
         src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us"
         alt="Download on the App Store"
-        width="220"
-        height="74"
+        width="200"
+        height="67"
       />
     </a>
 

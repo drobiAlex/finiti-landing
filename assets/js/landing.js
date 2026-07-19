@@ -1,6 +1,7 @@
 /* =========================================================
    Finiti landing — interactivity
-   - Year stamp
+   - Footer year stamp
+   - Live year dot grid in the hero (the product demo, in-page)
    - UTM -> Apple Campaign Link (ct token) rewriting on every App Store badge
    - PostHog click capture (PostHog itself is initialized inline in <head>)
    - IntersectionObserver-based scroll reveals (respects prefers-reduced-motion)
@@ -14,6 +15,36 @@
   // ---- Footer year ----
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // ---- Live year dot grid ----
+  var grid = document.getElementById('year-grid');
+  if (grid) {
+    var now = new Date();
+    var y = now.getFullYear();
+    // Local calendar dates mapped through UTC so DST shifts can't skew the
+    // day index by an hour and misplace "today".
+    var MS_DAY = 86400000;
+    var totalDays = Math.round((Date.UTC(y + 1, 0, 1) - Date.UTC(y, 0, 1)) / MS_DAY);
+    var dayIndex = Math.round(
+      (Date.UTC(y, now.getMonth(), now.getDate()) - Date.UTC(y, 0, 1)) / MS_DAY
+    );
+
+    var frag = document.createDocumentFragment();
+    for (var i = 0; i < totalDays; i++) {
+      var dot = document.createElement('span');
+      dot.className =
+        i < dayIndex ? 'dot dot--gone' : i === dayIndex ? 'dot dot--today' : 'dot';
+      frag.appendChild(dot);
+    }
+    grid.appendChild(frag);
+
+    var pctGone = Math.round((dayIndex / totalDays) * 100);
+    var daysLeft = totalDays - dayIndex - 1;
+    var summary = y + ' · ' + pctGone + '% gone · ' + daysLeft + ' days left';
+    grid.setAttribute('aria-label', summary);
+    var label = document.getElementById('year-grid-label');
+    if (label) label.textContent = summary;
+  }
 
   // ---- App Store badge: rewrite href + capture click ----
   var params = new URLSearchParams(location.search);
